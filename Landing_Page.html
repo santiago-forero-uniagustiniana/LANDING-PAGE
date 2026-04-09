@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>IngeAuto FM - Serviteca Automotriz</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* Estilos personalizados que complementan Bootstrap */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            background-color: #F5F7F7;
+            color: #1D1A1A;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* HEADER */
+        .header {
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-bottom: 1px solid rgba(190,16,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: #FFFFFF;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #BE1000;
+            background: #FFFFFF;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .logo span {
+            color: #1D1A1A;
+            font-weight: 600;
+        }
+        .logo small {
+            font-size: 0.7rem;
+            display: block;
+            color: #5a5a5a;
+            font-weight: normal;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            color: #1D1A1A;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+        .contact-item:hover {
+            color: #BE1000;
+            background-color: rgba(190,16,0,0.05);
+        }
+
+        /* HERO */
+        .hero-form {
+            margin-top: 24px;
+            background: white;
+            border-radius: 60px;
+            padding: 6px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 1px solid rgba(190,16,0,0.2);
+        }
+
+        .hero-input {
+            flex: 1;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 60px;
+            font-size: 1rem;
+            outline: none;
+            font-family: inherit;
+            min-width: 180px;
+        }
+
+        .hero-input:focus {
+            box-shadow: 0 0 0 2px rgba(190,16,0,0.3);
+        }
+
+        .hero-submit-btn {
+            background-color: #BE1000;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 60px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .hero-submit-btn:hover {
+            background-color: #9e0e00;
+            transform: scale(1.02);
+        }
+
+        .hero-form-note {
+            display: block;
+            width: 100%;
+            font-size: 0.7rem;
+            color: #5a5a5a;
+            padding: 8px 12px;
+            text-align: center;
+        }
+        .hero {
+            padding: 70px 0 60px;
+            background: linear-gradient(135deg, #FFFFFF 0%, #F5F7F7 100%);
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(190,16,0,0.1);
+            color: #BE1000;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #1D1A1A;
+        }
+        .hero-content h1 span {
+            color: #BE1000;
+            border-bottom: 3px solid #BE1000;
+        }
+        .hero-desc {
+            font-size: 1.2rem;
+            color: #2e2a2a;
+            margin-bottom: 32px;
+        }
+        
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #BE1000;
+        }
+        
+        .hero-image {
+            background: #F0F2F2;
+            border-radius: 32px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.08);
+            border: 1px solid rgba(190,16,0,0.2);
+        }
+        .hero-image .mock-icon {
+            font-size: 6rem;
+            margin-bottom: 10px;
+        }
+
+        /* FEATURES VS BENEFITS */
+        .features-benefits {
+            padding: 70px 0;
+            background: white;
+        }
+        
+        .comparison-card {
+            background: #F5F7F7;
+            border-radius: 24px;
+            padding: 32px 24px;
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid rgba(190,16,0,0.1);
+        }
+        .comparison-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 35px -12px rgba(190,16,0,0.15);
+            border-color: #BE1000;
+        }
+        .comparison-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .comparison-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1D1A1A;
+        }
+        .feature-item {
+            background: white;
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-left: 3px solid #BE1000;
+        }
+        .feature-icon {
+            font-size: 1.3rem;
+        }
+        .feature-text {
+            flex: 1;
+        }
+        .feature-label {
+            font-size: 0.75rem;
+            color: #BE1000;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .feature-desc {
+            font-weight: 600;
+            color: #1D1A1A;
+        }
+        .benefit-item {
+            background: white;
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-right: 3px solid #1D1A1A;
+        }
+        .benefit-icon {
+            font-size: 1.3rem;
+            color: #BE1000;
+        }
+        .badge-feature {
+            background-color: rgba(190,16,0,0.1);
+            color: #BE1000;
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        /* SERVICIOS (beneficios) */
+        .services {
+            padding: 70px 0;
+            background: #F5F7F7;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: #1D1A1A;
+        }
+        .section-sub {
+            text-align: center;
+            color: #5a5555;
+            max-width: 680px;
+            margin: 0 auto 48px auto;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 24px;
+            padding: 28px 20px;
+            text-align: center;
+            transition: all 0.25s ease;
+            border-bottom: 3px solid transparent;
+            height: 100%;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-bottom-color: #BE1000;
+            background: #ffffff;
+            box-shadow: 0 12px 24px rgba(190,16,0,0.08);
+        }
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .service-card p {
+            color: #3d3a3a;
+            font-size: 0.9rem;
+        }
+
+        /* EXPLICACIÓN INGENIERÍA AUTOMOTRIZ */
+        .engineering-explain {
+            background: white;
+            padding: 70px 0;
+        }
+        
+        .product-text h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #1D1A1A;
+        }
+        .product-text .highlight {
+            color: #BE1000;
+        }
+        .product-text p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .feature-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .check {
+            color: #BE1000;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        .product-media {
+            background: #F5F7F7;
+            border-radius: 32px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(190,16,0,0.2);
+        }
+
+        /* TESTIMONIOS */
+        .testimonials {
+            padding: 70px 0;
+            background: linear-gradient(135deg, #F5F7F7 0%, #FFFFFF 100%);
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 24px;
+            padding: 32px;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+            border: 1px solid rgba(190,16,0,0.1);
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 35px -12px rgba(190,16,0,0.15);
+        }
+        .testimonial-stars {
+            color: #FFB800;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+        }
+        .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #2e2a2a;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #eee;
+        }
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #BE1000, #e03a2a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+        .testimonial-name {
+            font-weight: 700;
+            color: #1D1A1A;
+            margin-bottom: 4px;
+        }
+        .testimonial-role {
+            font-size: 0.8rem;
+            color: #BE1000;
+        }
+
+        /* CTA - Paquete de mantenimiento */
+        .cta-section {
+            background: #1D1A1A;
+            padding: 70px 0;
+            text-align: center;
+            color: white;
+        }
+        .cta-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 18px;
+            color: white;
+        }
+        .cta-phrase {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #F5F7F7;
+            margin-bottom: 32px;
+            border-left: 4px solid #BE1000;
+            display: inline-block;
+            padding-left: 20px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+        }
+        .cta-button {
+            background-color: #BE1000;
+            color: white;
+            border: none;
+            padding: 16px 44px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 8px 18px rgba(190,16,0,0.3);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            background-color: #9e0e00;
+            transform: scale(1.02);
+            box-shadow: 0 12px 22px rgba(190,16,0,0.4);
+        }
+        .cta-note {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 70px 0;
+            background: white;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(190,16,0,0.05);
+            color: #BE1000;
+        }
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(190,16,0,0.25);
+            border-color: rgba(190,16,0,0.5);
+        }
+        .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23BE1000'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+
+        /* PREFOTER */
+        .prefooter {
+            background: #F5F7F7;
+            padding: 50px 0;
+            text-align: center;
+            border-top: 1px solid rgba(190,16,0,0.2);
+        }
+        .prefooter h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .prefooter-cta {
+            margin-top: 24px;
+            background-color: #BE1000;
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            font-weight: 600;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        .prefooter-cta:hover {
+            background-color: #9e0e00;
+            transform: scale(1.02);
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: #1D1A1A;
+            color: #cbcbcb;
+            padding: 48px 0 24px;
+        }
+        .footer-brand .logo-footer {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #BE1000;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+        .footer-col a {
+            display: block;
+            color: #cbcbcb;
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover {
+            color: #BE1000;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 28px;
+            font-size: 0.8rem;
+        }
+        
+        button {
+            background: none;
+            font-family: inherit;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .cta-phrase { font-size: 1.3rem; }
+            .section-title { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
+            <div class="logo">Inge<span>Auto FM</span><small>Serviteca Automotriz</small></div>
+            <div class="d-flex flex-wrap gap-2">
+                <a href="tel:+573005551234" class="contact-item">
+                    <i class="bi bi-telephone-fill"></i> 300 555 1234
+                </a>
+                <a href="https://wa.me/573005551234" class="contact-item">
+                    <i class="bi bi-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://www.google.com/maps/place/Ingeauto+Fm+Sas/@4.6115313,-74.1358955,847m/data=!3m2!1e3!4b1!4m6!3m5!1s0x8e3f9c3143e6fd0d:0x62fcba1ce94763c3!8m2!3d4.6115313!4d-74.1333206!16s%2Fg%2F11sy73c63w" class="contact-item" target="_blank">
+                    <i class="bi bi-geo-alt-fill"></i> Ac. 26 Sur #68H-85
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero con información de la serviteca -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <div class="hero-badge">Más de 5 años cuidando tu vehículo</div>
+                    <h1>Especialistas en <span>montallantas, mecánica e ingeniería</span> automotriz</h1>
+                    <p class="hero-desc">Desde cambios de aceite hasta diagnóstico computarizado. Ofrecemos servicios integrales con tecnología de punta y personal especializado.</p>
+                    <div class="row g-4">
+                        <div class="col-auto">
+                            <div class="stat"><span class="stat-number">+10.000</span><br>vehículos atendidos</div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="stat"><span class="stat-number">+5 años</span><br>sirviendo honestamente</div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="stat"><span class="stat-number">5.0⭐</span><br>en Google Maps</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="hero-image">
+                        <div class="mock-icon"><img src="/Users/user/Documents/HTML/Logotipo Ejercicio/Ingeauto FM/Images/pngwing.com (3).png" width="75%" alt="Carro"></div>
+                        <p><strong>Alineación y Balanceo 15% de descuento</strong><br>Dejando solamente tu <span>correo electrónico o tu teléfono</span></p>
+                        <div class="hero-form">
+                            <input type="text" id="contactInput" class="hero-input" placeholder="Ej: correo@ejemplo.com o 3001234567">
+                            <button id="heroSubmitBtn" class="hero-submit-btn">Enviar →</button>
+                            <small class="hero-form-note">Recibirás tu cupón de descuento al instante</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES VS BENEFITS - 3 cuadros comparativos -->
+    <section class="features-benefits">
+        <div class="container">
+            <h2 class="section-title">Características que marcan la diferencia</h2>
+            <p class="section-sub">Conoce por qué nuestros clientes confían en nosotros para el cuidado de sus vehículos</p>
+            <div class="row g-4">
+                <!-- Cuadro 1: Diagnóstico Computarizado -->
+                <div class="col-lg-4">
+                    <div class="comparison-card">
+                        <div class="comparison-icon">🔬🖥️</div>
+                        <h3 class="comparison-title">Diagnóstico Computarizado</h3>
+                        <div class="badge-feature">Lo que ofrecemos</div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="bi bi-check-square-fill"></i></span>
+                            <div class="feature-text">
+                                <div class="feature-label">CARACTERÍSTICA</div>
+                                <div class="feature-desc">Escáner profesional multi-marca</div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="bi bi-check-square-fill"></i></span>
+                            <div class="feature-text">
+                                <div class="feature-label">CARACTERÍSTICA</div>
+                                <div class="feature-desc">Lectura y borrado de códigos DTC</div>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon"><i class="bi bi-lightbulb-fill"></i></span>
+                            <div class="feature-text">
+                                <div class="feature-label">BENEFICIO</div>
+                                <div class="feature-desc">Ahorra hasta 70% en reparaciones innecesarias</div>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon"><i class="bi bi-lightbulb-fill"></i></span>
+                            <div class="feature-text">
+                                <div class="feature-label">BENEFICIO</div>
+                                <div class="feature-desc">Diagnóstico preciso en minutos, no en días</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cuadro 2: Tecnología de Punta -->
+                <div class="col-lg-4">
+                    <div class="comparison-card">
+                        <div class="comparison-icon">⚙️🔧</div>
+                        <h3 class="comparison-title">Equipos de Última Generación</h3>
+                        <div class="badge-feature">Lo que ofrecemos</div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="bi bi-check-square-fill"></i></span>
+                            <div class="feature-text">
+                                <div class="feature-label">CARACTERÍSTICA</div>
+                                <div class="feature-desc">Alineación 3D computarizada</div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="bi bi-check-square-fill"></i></span>
+                            <div class="feature-text">
+                                <div class="feature-label">CARACTERÍSTICA</div>
+                                <div class="feature-desc">Balanceo dinámico de alta precisión</div>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon"><i class="bi bi-lightbulb-fill"></i></span>
+                            <div class="feature-text">
+                                <div class="feature-label">BENEFICIO</div>
+                                <div class="feature-desc">Tus llantas duran hasta 40% más kilómetros</div>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon"><i class="bi bi-lightbulb-fill"></i></span>
+                            <div class="feature-text">
+                                <div class="feature-label">BENEFICIO</div>
+                                <div class="feature-desc">Conducción más suave y sin vibraciones</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cuadro 3: Garantía y Respaldo -->
+                <div class="col-lg-4">
+                    <div class="comparison-card">
+                        <div class="comparison-icon">📋🛡️</div>
+                        <h3 class="comparison-title">Garantía Total</h3>
+                        <div class="badge-feature">Lo que ofrecemos</div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="bi bi-check-square-fill"></i></span>
+                            <div class="feature-text">
+                                <div class="feature-label">CARACTERÍSTICA</div>
+                                <div class="feature-desc">Garantía escrita en todos los servicios</div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="bi bi-check-square-fill"></i></span>
+                            <div class="feature-text">
+                                <div class="feature-label">CARACTERÍSTICA</div>
+                                <div class="feature-desc">Técnicos especializados y en constante capacitación</div>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon"><i class="bi bi-lightbulb-fill"></i></span>
+                            <div class="feature-text">
+                                <div class="feature-label">BENEFICIO</div>
+                                <div class="feature-desc">Tranquilidad y seguridad para tu bolsillo</div>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon"><i class="bi bi-lightbulb-fill"></i></span>
+                            <div class="feature-text">
+                                <div class="feature-label">BENEFICIO</div>
+                                <div class="feature-desc">Soporte post-servicio sin costo adicional</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios usando grid de Bootstrap -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Nuestros servicios especializados</h2>
+            <p class="section-sub">Todo lo que tu vehículo necesita en un solo lugar, con garantía y respaldo técnico</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">🛞</div>
+                        <h3>Montallantas</h3>
+                        <p>Montaje y desmontaje con maquinaria de última generación, sin dañar tus rines.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">⚙️🛢️</div>
+                        <h3>Cambio de aceite</h3>
+                        <p>Aceites sintéticos y minerales, filtros originales, revisión de niveles.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">📐</div>
+                        <h3>Alineación</h3>
+                        <p>Alineación 3D computarizada para mayor duración de tus neumáticos.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">⚖️</div>
+                        <h3>Balanceo</h3>
+                        <p>Balanceo dinámico y estático, eliminamos vibraciones al conducir.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">🪙</div>
+                        <h3>Calibracion con Aire o Nitrogeno</h3>
+                        <p>Calibracion cotidiana o nitrogenada para un consumo total 20% menor.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">🛠️</div>
+                        <h3>Despinches</h3>
+                        <p>Atención rápida para despinches, sellado y parcheo express.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">🧴🔩</div>
+                        <h3>Venta de insumos</h3>
+                        <p>Aceites, aditivos, filtros, llantas, baterías y más a precios competitivos.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">🧠🔍</div>
+                        <h3>Ingeniería automotriz</h3>
+                        <p>Diagnóstico electrónico, reprogramación, escáner profesional y asesoría técnica.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explicando ingeniería automotriz y valor agregado -->
+    <section class="engineering-explain">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="product-text">
+                        <h2>Ingeniería automotriz de precisión: <span class="highlight">diagnóstico que ahorra dinero</span></h2>
+                        <p>Nuestro departamento de <strong>ingeniería automotriz</strong> está conformado por técnicos y tecnólogos especializados en electrónica, motor y suspensión. No solo reparamos, diagnosticamos con equipos de escáner profesional y osciloscopios para encontrar fallas ocultas.</p>
+                        <ul class="feature-list">
+                            <li><span class="check">✓</span> Escáner automotriz multi-marca (lectura y borrado de códigos)</li>
+                            <li><span class="check">✓</span> Reprogramación de centrales y calibración electrónica</li>
+                            <li><span class="check">✓</span> Análisis de compresión, fugas y sistemas de inyección</li>
+                            <li><span class="check">✓</span> Asesoría personalizada para flotas y vehículos de alta gama</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="product-media">
+                        <div style="font-size: 3rem;">🔬🚗</div>
+                        <h3 style="margin: 12px 0 8px;">Diagnóstico con tecnología</h3>
+                        <p>Equipos Bosch, Launch, Autel y herramientas de última generación para garantizar precisión.</p>
+                        <div class="bg-danger bg-opacity-10 rounded-pill p-3 mt-3">
+                            <span class="fw-bold">Promoción:</span> <strong class="text-danger">Diagnóstico general a solo $49.900</strong> (válido por tiempo limitado)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS - Antes del FAQ -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            <p class="section-sub">Más de 10.000 conductores confían en nosotros para el cuidado de sus vehículos</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text">"Excelente servicio, llevé mi camioneta para alineación y balanceo, quedó perfecta. El diagnóstico computarizado me ayudó a detectar una falla que nadie más había encontrado. Muy profesionales y precios justos."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+                            <div>
+                                <div class="testimonial-name">Carlos Mendoza</div>
+                                <div class="testimonial-role">Cliente desde 2022</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text">"El cambio de aceite fue rápido y eficiente. Me explicaron todo lo que le hicieron a mi carro y me dieron recomendaciones para el mantenimiento futuro. El servicio de ingeniería automotriz es increíble. ¡100% recomendados!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+                            <div>
+                                <div class="testimonial-name">Ana Rodríguez</div>
+                                <div class="testimonial-role">Cliente frecuente</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text">"Excelente servicio y atención de primera
+
+En esta serviteca se destaco su profesionalismo, rapidez y excelente atención al cliente.
+
+Ofrecen repuestos de buena calidad, diagnósticos claros y recomendaciones honestas, sin intentar vender servicios innecesarios.
+
+Totalmente recomendados para quienes buscan seguridad, buen precio y un servicio bien hecho." (REAL)</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+                            <div>
+                                <div class="testimonial-name">Juan Sebastian Cordoba Urbano</div>
+                                <div class="testimonial-role">Cliente 2026</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA con frase atractiva para lead magnet -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Cuida tu vehículo como un experto</h2>
+            <div class="cta-phrase">"Un auto bien mantenido no solo dura más, te lleva más lejos con seguridad."</div>
+            <button id="mainCtaBtn" class="cta-button"><i class="bi bi-calendar-check"></i> OBTÉN MI CUPÓN DE DIAGNÓSTICO GRATIS</button>
+            <div class="cta-note">Aplica para primera visita. Incluye revisión computarizada, frenos y suspensión. Cupo limitado.</div>
+        </div>
+    </section>
+
+    <!-- FAQ usando Accordion de Bootstrap -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas frecuentes</h2>
+            <p class="section-sub">Resolvemos tus dudas sobre nuestros servicios, tiempos y garantías</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    ¿Cuánto demora un cambio de aceite completo?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    El cambio de aceite con filtro y revisión de niveles dura aproximadamente 30-40 minutos. Contamos con área de espera cómoda y café gratis.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    ¿Hacen alineación y balanceo para todo tipo de vehículos?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sí, trabajamos con autos particulares, SUVs, camionetas y vehículos comerciales livianos. Usamos equipos de alineación 3D para máxima precisión.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    ¿Venden llantas e insumos originales?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Contamos con alianza con marcas líderes: Michelin, Bridgestone, Goodyear, y también insumos originales de filtros, aceites Castrol, Mobil y Total.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    ¿Qué incluye el diagnóstico gratuito por ingeniería automotriz?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Incluye escaneo electrónico, revisión de códigos de falla, inspección de frenos y suspensión, más un informe detallado con recomendaciones. Sin costo al momento de realizar cualquier servicio.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    ¿Ofrecen garantía en sus trabajos?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sí, todos nuestros servicios tienen garantía escrita de 3 meses o 5.000 km, lo que ocurra primero. Respaldo total en mano de obra y repuestos instalados.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prefooter con llamado a acción -->
+    <section class="prefooter">
+        <div class="container">
+            <h3>¿Necesitas un diagnóstico experto o mantenimiento preventivo?</h3>
+            <p class="mb-2">Agenda tu cita y recibe un 15% de descuento en tu primer servicio de alineación y balanceo.</p>
+            <button id="prefooterBtn" class="prefooter-cta">Quiero mi cupón de descuento →</button>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="footer-brand">
+                    <div class="logo-footer"><span style="color:#BE1000">Inge</span><span style="color:#cbcbcb;">Auto FM</span></div>
+                    <p class="mt-3">Montallantas, Mecánica e Ingeniería.<br>Atendemos todas las marcas.</p>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-col">
+                            <h4>Servicios</h4>
+                            <a href="#">Montallantas</a>
+                            <a href="#">Cambio de aceite</a>
+                            <a href="#">Alineación y balanceo</a>
+                            <a href="#">Vulcanizadas y despinches</a>
+                            <a href="#">Ingeniería automotriz</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-col">
+                            <h4>Horarios</h4>
+                            <a href="#">Servicio Montallantas: Todos los dias 24 Horas </a>
+                            <a href="#">Otros servicios: Lun - Sab 7:00a.m. a 5:00p.m.</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-col">
+                            <h4>Contacto</h4>
+                            <a href="#">WhatsApp: 300 555 1234</a>
+                            <a href="#">Tel: 300 555-1234</a>
+                            <a href="#">ingeauto@gmail.com</a>
+                            <a href="#">Política de privacidad</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 IngeAuto — Serviteca Automotriz. Todos los derechos reservados.
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Función para simular captación de lead magnet (cupón o diagnóstico)
+    function handleLeadMagnetCTA() {
+        const userConfirmed = confirm("🔧 ¡Obtén tu cupón de diagnóstico gratis + descuento! Haz clic en Aceptar para agendar tu cita preferencial (demo interactiva).");
+        if (userConfirmed) {
+            alert("✅ ¡Excelente! Nuestro asesor se pondrá en contacto contigo en los próximos minutos para agendar tu diagnóstico gratuito.\n\nRecibirás también un código de descuento por WhatsApp.");
+        } else {
+            alert("Sin problema. Puedes visitarnos directamente en nuestra sede o llamarnos cuando lo desees. ¡Te esperamos!");
+        }
+    }
+
+    const mainCta = document.getElementById('mainCtaBtn');
+    const prefooterBtn = document.getElementById('prefooterBtn');
+    
+    if (mainCta) {
+        mainCta.addEventListener('click', handleLeadMagnetCTA);
+    }
+    if (prefooterBtn) {
+        prefooterBtn.addEventListener('click', handleLeadMagnetCTA);
+    }
+
+    console.log("Serviteca con Bootstrap - Especialistas en montallantas, aceite, alineación, balanceo, vulcanizadas, despinches, insumos e ingeniería automotriz");
+</script>
+</body>
+</html>
