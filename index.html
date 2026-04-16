@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-        <!-- Google Tag Manager -->
+    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <style>
-        /* Estilos personalizados que complementan Bootstrap */
         * {
             margin: 0;
             padding: 0;
@@ -133,7 +132,7 @@
             text-align: center;
         }
         .hero {
-            padding: 70px 0 60px;
+            padding: 30px 0 60px;
             background: linear-gradient(135deg, #FFFFFF 0%, #F5F7F7 100%);
         }
         
@@ -247,7 +246,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            border-right: 3px solid #1D1A1A;
+            border-left: 3px solid #1D1A1A;
         }
         .benefit-icon {
             font-size: 1.3rem;
@@ -263,7 +262,7 @@
             margin-bottom: 12px;
         }
 
-        /* SERVICIOS (beneficios) */
+        /* SERVICIOS */
         .services {
             padding: 70px 0;
             background: #F5F7F7;
@@ -311,7 +310,6 @@
             font-size: 0.9rem;
         }
 
-        /* EXPLICACIÓN INGENIERÍA AUTOMOTRIZ */
         .engineering-explain {
             background: white;
             padding: 70px 0;
@@ -413,7 +411,7 @@
             color: #BE1000;
         }
 
-        /* CTA - Paquete de mantenimiento */
+        /* CTA */
         .cta-section {
             background: #1D1A1A;
             padding: 70px 0;
@@ -460,7 +458,19 @@
             font-size: 0.85rem;
             opacity: 0.8;
         }
-
+        
+        .cta-col a {
+            color: #be1000;
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+        
+        .cta-col a:hover {
+            color: #ff4343;
+        }
+        
         /* FAQ */
         .faq {
             padding: 70px 0;
@@ -557,11 +567,10 @@
     </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVD6SWS6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
 <header class="header">
     <div class="container">
         <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
@@ -582,34 +591,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <main>
-    <!-- Hero con información de la serviteca -->
     <section class="hero">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-7">
-                    <div class="hero-badge">Más de 5 años cuidando tu vehículo</div>
-                    <h1>Especialistas en <span>montallantas, mecánica e ingeniería</span> automotriz</h1>
-                    <p class="hero-desc">Desde cambios de aceite hasta diagnóstico computarizado. Ofrecemos servicios integrales con tecnología de punta y personal especializado.</p>
+                    <div class="hero-badge">Mas de 5 años cuidando tu vehiculo</div>
+                    <h1>Especialistas en <span>montallantas, mecanica e ingenieria</span> automotriz</h1>
+                    <p class="hero-desc">Desde cambios de aceite hasta diagnostico computarizado. Ofrecemos servicios integrales con tecnologia de punta y personal especializado.</p>
                     <div class="row g-4">
                         <div class="col-auto">
-                            <div class="stat"><span class="stat-number">+10.000</span><br>vehículos atendidos</div>
+                            <div class="stat"><span class="stat-number">+10.000</span><br>vehiculos atendidos</div>
                         </div>
                         <div class="col-auto">
                             <div class="stat"><span class="stat-number">+5 años</span><br>sirviendo honestamente</div>
                         </div>
                         <div class="col-auto">
-                            <div class="stat"><span class="stat-number">5.0⭐</span><br>en Google Maps</div>
+                            <div class="stat"><span class="stat-number">5.0<i class="bi bi-star-fill"></i></span><br>en Google Maps</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="hero-image">
-                        <div class="mock-icon"><img src="/Users/user/Documents/HTML/Logotipo Ejercicio/Ingeauto FM/Images/pngwing.com (3).png" width="75%" alt="Carro"></div>
-                        <p><strong>Alineación y Balanceo 15% de descuento</strong><br>Dejando solamente tu <span>correo electrónico o tu teléfono</span></p>
+                        <div class="mock-icon"><img src="Images/pngwing.com (3).png" width="280rem" alt="Carro"></div>
+                        <p><strong>Alineacion y Balanceo 10% de descuento</strong><br>Dejando solamente tu <span>correo electronico</span></p>
                         <div class="hero-form">
-                            <input type="text" id="contactInput" class="hero-input" placeholder="Ej: correo@ejemplo.com o 3001234567">
-                            <button id="heroSubmitBtn" class="hero-submit-btn">Enviar →</button>
-                            <small class="hero-form-note">Recibirás tu cupón de descuento al instante</small>
+                            <input type="text" id="contactInput" class="hero-input" placeholder="Ej: nombre@correo.com">
+                            <button id="heroSubmitBtn" class="hero-submit-btn">Enviar</button>
+                            <small class="hero-form-note">Recibiras tu cupon de descuento al instante</small>
                         </div>
                     </div>
                 </div>
@@ -617,30 +625,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
-    <!-- FEATURES VS BENEFITS - 3 cuadros comparativos -->
     <section class="features-benefits">
         <div class="container">
-            <h2 class="section-title">Características que marcan la diferencia</h2>
-            <p class="section-sub">Conoce por qué nuestros clientes confían en nosotros para el cuidado de sus vehículos</p>
+            <h2 class="section-title">Caracteristicas que marcan la diferencia</h2>
+            <p class="section-sub">Conoce por que nuestros clientes confian en nosotros para el cuidado de sus vehiculos</p>
             <div class="row g-4">
-                <!-- Cuadro 1: Diagnóstico Computarizado -->
                 <div class="col-lg-4">
                     <div class="comparison-card">
                         <div class="comparison-icon">🔬🖥️</div>
-                        <h3 class="comparison-title">Diagnóstico Computarizado</h3>
+                        <h3 class="comparison-title">Diagnostico Computarizado</h3>
                         <div class="badge-feature">Lo que ofrecemos</div>
                         <div class="feature-item">
                             <span class="feature-icon"><i class="bi bi-check-square-fill"></i></span>
                             <div class="feature-text">
-                                <div class="feature-label">CARACTERÍSTICA</div>
-                                <div class="feature-desc">Escáner profesional multi-marca</div>
+                                <div class="feature-label">CARACTERISTICA</div>
+                                <div class="feature-desc">Escaner profesional multi-marca</div>
                             </div>
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon"><i class="bi bi-check-square-fill"></i></span>
                             <div class="feature-text">
-                                <div class="feature-label">CARACTERÍSTICA</div>
-                                <div class="feature-desc">Lectura y borrado de códigos DTC</div>
+                                <div class="feature-label">CARACTERISTICA</div>
+                                <div class="feature-desc">Lectura y borrado de codigos DTC</div>
                             </div>
                         </div>
                         <div class="benefit-item">
@@ -654,65 +660,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <span class="benefit-icon"><i class="bi bi-lightbulb-fill"></i></span>
                             <div class="feature-text">
                                 <div class="feature-label">BENEFICIO</div>
-                                <div class="feature-desc">Diagnóstico preciso en minutos, no en días</div>
+                                <div class="feature-desc">Diagnostico preciso en minutos, no en dias</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Cuadro 2: Tecnología de Punta -->
                 <div class="col-lg-4">
                     <div class="comparison-card">
                         <div class="comparison-icon">⚙️🔧</div>
-                        <h3 class="comparison-title">Equipos de Última Generación</h3>
+                        <h3 class="comparison-title">Equipos de Ultima Generacion</h3>
                         <div class="badge-feature">Lo que ofrecemos</div>
                         <div class="feature-item">
                             <span class="feature-icon"><i class="bi bi-check-square-fill"></i></span>
                             <div class="feature-text">
-                                <div class="feature-label">CARACTERÍSTICA</div>
-                                <div class="feature-desc">Alineación 3D computarizada</div>
+                                <div class="feature-label">CARACTERISTICA</div>
+                                <div class="feature-desc">Alineacion 3D computarizada</div>
                             </div>
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon"><i class="bi bi-check-square-fill"></i></span>
                             <div class="feature-text">
-                                <div class="feature-label">CARACTERÍSTICA</div>
-                                <div class="feature-desc">Balanceo dinámico de alta precisión</div>
+                                <div class="feature-label">CARACTERISTICA</div>
+                                <div class="feature-desc">Calibracion Nitrogranda a medida del cliente</div>
                             </div>
                         </div>
                         <div class="benefit-item">
                             <span class="benefit-icon"><i class="bi bi-lightbulb-fill"></i></span>
                             <div class="feature-text">
                                 <div class="feature-label">BENEFICIO</div>
-                                <div class="feature-desc">Tus llantas duran hasta 40% más kilómetros</div>
+                                <div class="feature-desc">Tus llantas duran hasta 40% mas kilometros</div>
                             </div>
                         </div>
                         <div class="benefit-item">
                             <span class="benefit-icon"><i class="bi bi-lightbulb-fill"></i></span>
                             <div class="feature-text">
                                 <div class="feature-label">BENEFICIO</div>
-                                <div class="feature-desc">Conducción más suave y sin vibraciones</div>
+                                <div class="feature-desc">Conduccion mas suave y sin vibraciones.</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Cuadro 3: Garantía y Respaldo -->
                 <div class="col-lg-4">
                     <div class="comparison-card">
                         <div class="comparison-icon">📋🛡️</div>
-                        <h3 class="comparison-title">Garantía Total</h3>
+                        <h3 class="comparison-title">Garantia Total</h3>
                         <div class="badge-feature">Lo que ofrecemos</div>
                         <div class="feature-item">
                             <span class="feature-icon"><i class="bi bi-check-square-fill"></i></span>
                             <div class="feature-text">
-                                <div class="feature-label">CARACTERÍSTICA</div>
-                                <div class="feature-desc">Garantía escrita en todos los servicios</div>
+                                <div class="feature-label">CARACTERISTICA</div>
+                                <div class="feature-desc">Garantia escrita en todos los servicios</div>
                             </div>
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon"><i class="bi bi-check-square-fill"></i></span>
                             <div class="feature-text">
-                                <div class="feature-label">CARACTERÍSTICA</div>
-                                <div class="feature-desc">Técnicos especializados y en constante capacitación</div>
+                                <div class="feature-label">CARACTERISTICA</div>
+                                <div class="feature-desc">Tecnicos experimentados y en constante capacitacion</div>
                             </div>
                         </div>
                         <div class="benefit-item">
@@ -735,43 +739,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
-    <!-- Servicios usando grid de Bootstrap -->
     <section class="services">
         <div class="container">
             <h2 class="section-title">Nuestros servicios especializados</h2>
-            <p class="section-sub">Todo lo que tu vehículo necesita en un solo lugar, con garantía y respaldo técnico</p>
+            <p class="section-sub">Todo lo que tu vehiculo necesita en un solo lugar, con garantia y respaldo tecnico</p>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
-                        <div class="service-icon">🛞</div>
+                        <div class="service-icon">🛞⚫️</div>
                         <h3>Montallantas</h3>
-                        <p>Montaje y desmontaje con maquinaria de última generación, sin dañar tus rines.</p>
+                        <p>Montaje y desmontaje con maquinaria de ultima generacion, sin dañar tus rines.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="service-icon">⚙️🛢️</div>
                         <h3>Cambio de aceite</h3>
-                        <p>Aceites sintéticos y minerales, filtros originales, revisión de niveles.</p>
+                        <p>Aceites sinteticos y minerales, filtros originales, revision de niveles.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="service-icon">📐</div>
-                        <h3>Alineación</h3>
-                        <p>Alineación 3D computarizada para mayor duración de tus neumáticos.</p>
+                        <h3>Alineacion</h3>
+                        <p>Alineacion 3D computarizada para mayor duracion de tus neumaticos.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="service-icon">⚖️</div>
                         <h3>Balanceo</h3>
-                        <p>Balanceo dinámico y estático, eliminamos vibraciones al conducir.</p>
+                        <p>Balanceo dinamico y estatico, eliminamos vibraciones al conducir.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
-                        <div class="service-icon">🪙</div>
+                        <div class="service-icon">❄️💨</div>
                         <h3>Calibracion con Aire o Nitrogeno</h3>
                         <p>Calibracion cotidiana o nitrogenada para un consumo total 20% menor.</p>
                     </div>
@@ -780,50 +783,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="service-card">
                         <div class="service-icon">🛠️</div>
                         <h3>Despinches</h3>
-                        <p>Atención rápida para despinches, sellado y parcheo express.</p>
+                        <p>Atencion rapida para despinches, sellado y parcheo express.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="service-icon">🧴🔩</div>
                         <h3>Venta de insumos</h3>
-                        <p>Aceites, aditivos, filtros, llantas, baterías y más a precios competitivos.</p>
+                        <p>Aceites, aditivos, refrigerantes, filtros, llantas y mas a precios competitivos.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="service-icon">🧠🔍</div>
-                        <h3>Ingeniería automotriz</h3>
-                        <p>Diagnóstico electrónico, reprogramación, escáner profesional y asesoría técnica.</p>
+                        <h3>Ingenieria automotriz</h3>
+                        <p>Diagnostico electronico, reprogramacion, escaner profesional y asesoria tecnica.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Explicando ingeniería automotriz y valor agregado -->
     <section class="engineering-explain">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
                     <div class="product-text">
-                        <h2>Ingeniería automotriz de precisión: <span class="highlight">diagnóstico que ahorra dinero</span></h2>
-                        <p>Nuestro departamento de <strong>ingeniería automotriz</strong> está conformado por técnicos y tecnólogos especializados en electrónica, motor y suspensión. No solo reparamos, diagnosticamos con equipos de escáner profesional y osciloscopios para encontrar fallas ocultas.</p>
+                        <h2>Ingenieria automotriz de precision: <span class="highlight">diagnostico que ahorra dinero</span></h2>
+                        <p>Nuestro departamento de <strong>ingenieria automotriz</strong> esta conformado por tecnicos y tecnologos especializados en electronica, motor y suspension. No solo reparamos, diagnosticamos con equipos de escaner profesional y osciloscopios para encontrar fallas ocultas.</p>
                         <ul class="feature-list">
-                            <li><span class="check">✓</span> Escáner automotriz multi-marca (lectura y borrado de códigos)</li>
-                            <li><span class="check">✓</span> Reprogramación de centrales y calibración electrónica</li>
-                            <li><span class="check">✓</span> Análisis de compresión, fugas y sistemas de inyección</li>
-                            <li><span class="check">✓</span> Asesoría personalizada para flotas y vehículos de alta gama</li>
+                            <li><span class="check">✓</span> Escaner automotriz multi-marca (lectura y borrado de codigos)</li>
+                            <li><span class="check">✓</span> Reprogramacion de centrales y calibracion electronica</li>
+                            <li><span class="check">✓</span> Analisis de compresion, fugas y sistemas de inyeccion</li>
+                            <li><span class="check">✓</span> Asesoria personalizada para flotas y vehiculos de alta gama</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="product-media">
                         <div style="font-size: 3rem;">🔬🚗</div>
-                        <h3 style="margin: 12px 0 8px;">Diagnóstico con tecnología</h3>
-                        <p>Equipos Bosch, Launch, Autel y herramientas de última generación para garantizar precisión.</p>
+                        <h3 style="margin: 12px 0 8px;">Diagnostico con tecnologia</h3>
+                        <p>Equipos y herramientas de ultima generacion para garantizar precision.</p>
                         <div class="bg-danger bg-opacity-10 rounded-pill p-3 mt-3">
-                            <span class="fw-bold">Promoción:</span> <strong class="text-danger">Diagnóstico general a solo $49.900</strong> (válido por tiempo limitado)
+                            <span class="fw-bold">Promocion:</span> <strong class="cta-col"><a href="#">Haz Clic Aqui para acceder a las promociones</a></strong> (valido por tiempo limitado)
                         </div>
                     </div>
                 </div>
@@ -831,11 +833,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
-    <!-- TESTIMONIOS - Antes del FAQ -->
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">Lo que dicen nuestros clientes</h2>
-            <p class="section-sub">Más de 10.000 conductores confían en nosotros para el cuidado de sus vehículos</p>
+            <p class="section-sub">Mas de 10.000 conductores confian en nosotros para el cuidado de sus vehiculos</p>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="testimonial-card">
@@ -846,7 +847,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
                         </div>
-                        <p class="testimonial-text">"Excelente servicio, llevé mi camioneta para alineación y balanceo, quedó perfecta. El diagnóstico computarizado me ayudó a detectar una falla que nadie más había encontrado. Muy profesionales y precios justos."</p>
+                        <p class="testimonial-text">"Excelente servicio, lleve mi camioneta para alineacion y balanceo, quedo perfecta. El diagnostico computarizado me ayudo a detectar una falla que nadie mas habia encontrado. Muy profesionales y precios justos."</p>
                         <div class="testimonial-author">
                             <div class="testimonial-avatar">
                                 <i class="bi bi-person-fill"></i>
@@ -867,13 +868,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
                         </div>
-                        <p class="testimonial-text">"El cambio de aceite fue rápido y eficiente. Me explicaron todo lo que le hicieron a mi carro y me dieron recomendaciones para el mantenimiento futuro. El servicio de ingeniería automotriz es increíble. ¡100% recomendados!"</p>
+                        <p class="testimonial-text">"El cambio de aceite fue rapido y eficiente. Me explicaron todo lo que le hicieron a mi carro y me dieron recomendaciones para el mantenimiento futuro. El servicio de ingenieria automotriz es increible. ¡100% recomendados!"</p>
                         <div class="testimonial-author">
                             <div class="testimonial-avatar">
                                 <i class="bi bi-person-fill"></i>
                             </div>
                             <div>
-                                <div class="testimonial-name">Ana Rodríguez</div>
+                                <div class="testimonial-name">Ana Rodriguez</div>
                                 <div class="testimonial-role">Cliente frecuente</div>
                             </div>
                         </div>
@@ -888,13 +889,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
                         </div>
-                        <p class="testimonial-text">"Excelente servicio y atención de primera
-
-En esta serviteca se destaco su profesionalismo, rapidez y excelente atención al cliente.
-
-Ofrecen repuestos de buena calidad, diagnósticos claros y recomendaciones honestas, sin intentar vender servicios innecesarios.
-
-Totalmente recomendados para quienes buscan seguridad, buen precio y un servicio bien hecho." (REAL)</p>
+                        <p class="testimonial-text">"Excelente servicio y atencion de primera. En esta serviteca se destaco su profesionalismo, rapidez y excelente atencion al cliente. Ofrecen repuestos de buena calidad, diagnosticos claros y recomendaciones honestas, sin intentar vender servicios innecesarios. Totalmente recomendados para quienes buscan seguridad, buen precio y un servicio bien hecho." (REAL)</p>
                         <div class="testimonial-author">
                             <div class="testimonial-avatar">
                                 <i class="bi bi-person-fill"></i>
@@ -910,45 +905,55 @@ Totalmente recomendados para quienes buscan seguridad, buen precio y un servicio
         </div>
     </section>
 
-    <!-- CTA con frase atractiva para lead magnet -->
     <section class="cta-section">
         <div class="container">
-            <h2 class="cta-title">Cuida tu vehículo como un experto</h2>
-            <div class="cta-phrase">"Un auto bien mantenido no solo dura más, te lleva más lejos con seguridad."</div>
-            <button id="mainCtaBtn" class="cta-button"><i class="bi bi-calendar-check"></i> OBTÉN MI CUPÓN DE DIAGNÓSTICO GRATIS</button>
-            <div class="cta-note">Aplica para primera visita. Incluye revisión computarizada, frenos y suspensión. Cupo limitado.</div>
+            <h2 class="cta-title">Cuida tu vehiculo como un experto</h2>
+            <div class="cta-phrase">"Un auto bien mantenido es la clave para tu seguridad y tu bolsillo."</div>
+            <button id="mainCtaBtn" class="cta-button"><i class="bi bi-calendar-check"></i> OBTEN MI CUPON GRATIS</button>
+            <div class="cta-note">Aplica para primera visita. Incluye revision computarizada, Alineacion y Balanceo. Cupo limitado.</div>
         </div>
     </section>
 
-    <!-- FAQ usando Accordion de Bootstrap -->
     <section class="faq">
         <div class="container">
             <h2 class="section-title">Preguntas frecuentes</h2>
-            <p class="section-sub">Resolvemos tus dudas sobre nuestros servicios, tiempos y garantías</p>
+            <p class="section-sub">Resolvemos tus dudas sobre nuestros servicios, tiempos y garantias</p>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="accordion" id="faqAccordion">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    ¿Cuánto demora un cambio de aceite completo?
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq0">
+                                    ¿Cuanto demora un cambio de aceite completo?
                                 </button>
                             </h2>
-                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div id="faq0" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    El cambio de aceite con filtro y revisión de niveles dura aproximadamente 30-40 minutos. Contamos con área de espera cómoda y café gratis.
+                                    El cambio de aceite con filtro y revision de niveles dura aproximadamente 20-30 minutos.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    ¿En que cambia la calibracion corriente a la nitrogenada?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    El nitrogeno es un aire frio, no tendras problemas con cambios de temperatura, durara muchisimo mas y cuidara mucho mejor de tus llantas. El proceso de purgacion lo hacemos aqui para la transicion a nitrogeno.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    ¿Hacen alineación y balanceo para todo tipo de vehículos?
+                                    ¿Hacen alineacion y balanceo para todo tipo de vehiculos?
                                 </button>
                             </h2>
                             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Sí, trabajamos con autos particulares, SUVs, camionetas y vehículos comerciales livianos. Usamos equipos de alineación 3D para máxima precisión.
+                                    Si, trabajamos con autos particulares, SUVs, camionetas y vehiculos comerciales livianos. Usamos equipos de alineacion 3D para maxima precision.
                                 </div>
                             </div>
                         </div>
@@ -960,31 +965,31 @@ Totalmente recomendados para quienes buscan seguridad, buen precio y un servicio
                             </h2>
                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Contamos con alianza con marcas líderes: Michelin, Bridgestone, Goodyear, y también insumos originales de filtros, aceites Castrol, Mobil y Total.
+                                    Contamos con alianza con marcas lideres: Pirelli, Goodyear. Y tambien insumos originales de repuestos, aceites Elf, Mobil, Havoline, Lubricantes Lubristone, etc.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                    ¿Qué incluye el diagnóstico gratuito por ingeniería automotriz?
+                                    ¿Que incluye el cupon de bienvenida de Alineacion y Balanceo?
                                 </button>
                             </h2>
                             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Incluye escaneo electrónico, revisión de códigos de falla, inspección de frenos y suspensión, más un informe detallado con recomendaciones. Sin costo al momento de realizar cualquier servicio.
+                                    Incluye un 10% de descuento en esos servicios, el precio del mismo depende de las dimensiones de su vehiculo.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                                    ¿Ofrecen garantía en sus trabajos?
+                                    ¿Ofrecen garantia en sus trabajos?
                                 </button>
                             </h2>
                             <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Sí, todos nuestros servicios tienen garantía escrita de 3 meses o 5.000 km, lo que ocurra primero. Respaldo total en mano de obra y repuestos instalados.
+                                    Si, todos nuestros servicios tienen garantia escrita de 3 meses o 5.000 km, lo que ocurra primero.
                                 </div>
                             </div>
                         </div>
@@ -994,12 +999,11 @@ Totalmente recomendados para quienes buscan seguridad, buen precio y un servicio
         </div>
     </section>
 
-    <!-- Prefooter con llamado a acción -->
     <section class="prefooter">
         <div class="container">
-            <h3>¿Necesitas un diagnóstico experto o mantenimiento preventivo?</h3>
-            <p class="mb-2">Agenda tu cita y recibe un 15% de descuento en tu primer servicio de alineación y balanceo.</p>
-            <button id="prefooterBtn" class="prefooter-cta">Quiero mi cupón de descuento →</button>
+            <h3>¿Necesitas un diagnostico experto o mantenimiento preventivo?</h3>
+            <p class="mb-2">Agenda tu cita y recibe un 10% de descuento en tu primer servicio de alineacion y balanceo.</p>
+            <button id="prefooterBtn" class="prefooter-cta">Quiero mi cupon de descuento</button>
         </div>
     </section>
 </main>
@@ -1010,7 +1014,7 @@ Totalmente recomendados para quienes buscan seguridad, buen precio y un servicio
             <div class="col-md-4">
                 <div class="footer-brand">
                     <div class="logo-footer"><span style="color:#BE1000">Inge</span><span style="color:#cbcbcb;">Auto FM</span></div>
-                    <p class="mt-3">Montallantas, Mecánica e Ingeniería.<br>Atendemos todas las marcas.</p>
+                    <p class="mt-3">Montallantas, Mecanica e Ingenieria.<br>Atendemos todas las marcas.</p>
                 </div>
             </div>
             <div class="col-md-8">
@@ -1020,9 +1024,9 @@ Totalmente recomendados para quienes buscan seguridad, buen precio y un servicio
                             <h4>Servicios</h4>
                             <a href="#">Montallantas</a>
                             <a href="#">Cambio de aceite</a>
-                            <a href="#">Alineación y balanceo</a>
+                            <a href="#">Alineacion y balanceo</a>
                             <a href="#">Vulcanizadas y despinches</a>
-                            <a href="#">Ingeniería automotriz</a>
+                            <a href="#">Ingenieria automotriz</a>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -1038,7 +1042,7 @@ Totalmente recomendados para quienes buscan seguridad, buen precio y un servicio
                             <a href="#">WhatsApp: 300 555 1234</a>
                             <a href="#">Tel: 300 555-1234</a>
                             <a href="#">ingeauto@gmail.com</a>
-                            <a href="#">Política de privacidad</a>
+                            <a href="#">Politica de privacidad</a>
                         </div>
                     </div>
                 </div>
@@ -1054,19 +1058,54 @@ Totalmente recomendados para quienes buscan seguridad, buen precio y un servicio
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-    // Función para simular captación de lead magnet (cupón o diagnóstico)
-    function handleLeadMagnetCTA() {
-        const userConfirmed = confirm("🔧 ¡Obtén tu cupón de diagnóstico gratis + descuento! Haz clic en Aceptar para agendar tu cita preferencial (demo interactiva).");
-        if (userConfirmed) {
-            alert("✅ ¡Excelente! Nuestro asesor se pondrá en contacto contigo en los próximos minutos para agendar tu diagnóstico gratuito.\n\nRecibirás también un código de descuento por WhatsApp.");
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    // Funcion para manejar el formulario del Hero (ahora SOLO acepta correo)
+    function handleHeroFormSubmit() {
+        const contactInput = document.getElementById('contactInput');
+        const contactValue = contactInput.value.trim();
+        
+        if (contactValue === "") {
+            alert("Por favor ingresa tu correo electronico para recibir el cupon de descuento.");
+            contactInput.focus();
+        } else if (!validateEmail(contactValue)) {
+            alert("Por favor ingresa un correo electronico valido. Ejemplo: nombre@correo.com");
+            contactInput.focus();
         } else {
-            alert("Sin problema. Puedes visitarnos directamente en nuestra sede o llamarnos cuando lo desees. ¡Te esperamos!");
+            alert("Gracias! Hemos registrado tu correo: " + contactValue + ". En breve recibiras tu cupon de descuento por correo electronico.");
+            contactInput.value = "";
         }
     }
 
+    function handleLeadMagnetCTA() {
+        const userEmail = prompt("Para obtener tu cupon de descuento, por favor ingresa tu correo electronico:");
+        
+        if (userEmail === null) {
+            alert("Puedes visitarnos directamente en nuestra sede o llamarnos cuando lo desees. Te esperamos!");
+            return;
+        }
+        
+        const emailTrimmed = userEmail.trim();
+        
+        if (emailTrimmed === "") {
+            alert("Debes ingresar un correo electronico para recibir el cupon de descuento.");
+        } else if (!validateEmail(emailTrimmed)) {
+            alert("Por favor ingresa un correo electronico valido. Ejemplo: nombre@correo.com");
+        } else {
+            alert("Excelente! Hemos registrado tu correo: " + emailTrimmed + ". Nuestro asesor se pondra en contacto contigo en los proximos minutos. Recibiras un codigo de descuento por correo electronico.");
+        }
+    }
+
+    const heroSubmitBtn = document.getElementById('heroSubmitBtn');
     const mainCta = document.getElementById('mainCtaBtn');
     const prefooterBtn = document.getElementById('prefooterBtn');
     
+    if (heroSubmitBtn) {
+        heroSubmitBtn.addEventListener('click', handleHeroFormSubmit);
+    }
     if (mainCta) {
         mainCta.addEventListener('click', handleLeadMagnetCTA);
     }
@@ -1074,7 +1113,8 @@ Totalmente recomendados para quienes buscan seguridad, buen precio y un servicio
         prefooterBtn.addEventListener('click', handleLeadMagnetCTA);
     }
 
-    console.log("Serviteca con Bootstrap - Especialistas en montallantas, aceite, alineación, balanceo, vulcanizadas, despinches, insumos e ingeniería automotriz");
+    console.log("Serviteca con Bootstrap - Especialistas en montallantas, aceite, alineacion, balanceo, vulcanizadas, despinches, insumos e ingenieria automotriz");
+
 </script>
 </body>
 </html>
