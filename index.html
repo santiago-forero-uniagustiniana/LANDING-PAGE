@@ -1091,7 +1091,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         } else {
             alert("Gracias! Hemos registrado tu correo: " + contactValue + ". En breve recibiras tu cupon de descuento por correo electronico.");
             contactInput.value = "";
-        }
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: 'form_success',
+                form_type: 'hero_form'
+            });
+        
+            contactInput.value = "";
+            }
     }
 
     function handleLeadMagnetCTA() {
@@ -1110,6 +1117,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             alert("Por favor ingresa un correo electronico valido. Ejemplo: nombre@correo.com");
         } else {
             alert("Excelente! Hemos registrado tu correo: " + emailTrimmed + ". Nuestro asesor se pondra en contacto contigo en los proximos minutos. Recibiras un codigo de descuento por correo electronico.");
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: 'form_success',
+                form_type: 'lead_magnet'
+            });
         }
     }
 
@@ -1127,7 +1139,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         prefooterBtn.addEventListener('click', handleLeadMagnetCTA);
     }
 
-    console.log("Serviteca con Bootstrap - Especialistas en montallantas, aceite, alineacion, balanceo, vulcanizadas, despinches, insumos e ingenieria automotriz");
+    console.log("IngeAutoFM - Especialistas en montallantas, aceite, alineacion, balanceo, vulcanizadas, despinches, insumos e ingenieria automotriz");
 
 </script>
 </body>
